@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import YashaLogo from '../../../assets/images/yashaeducare-logo.png'
+import YashaLogo from '../../../assets/logos/yashaeducare-logo.png'
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
