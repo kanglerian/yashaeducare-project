@@ -10,10 +10,16 @@ import {
 import './assets/css/index.css'
 import './assets/css/all.min.css'
 
+import About from './pages/Yayasan/About';
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Yayasan/>,
+  },
+  {
+    path: "/about",
+    element: <About/>,
   },
   {
     path: "/metaforstudy",

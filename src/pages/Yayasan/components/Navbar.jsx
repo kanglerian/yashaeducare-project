@@ -24,13 +24,13 @@ export const Navbar = () => {
   }, []);
   return (
     <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" ref={menuRef}>
+        <div className="container text-sm flex flex-wrap items-center justify-between mx-auto p-4" ref={menuRef}>
           <Link to={`/`}
             className="flex items-center"
           >
             <img
               src={YashaLogo}
-              className="h-20"
+              className="h-16"
               alt="Flowbite Logo"
             />
           </Link>
@@ -43,7 +43,7 @@ export const Navbar = () => {
             <i className="fa-solid fa-bars text-[15px]"></i>
           </button>
           <div className={`md:block md:w-auto ${isOpen ? 'w-full' : 'hidden'}`}>
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+            <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
               <li>
                 <Link
                   to={`/`}
@@ -118,10 +118,18 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={`/`}
+                  to={`/about`}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-500 md:p-0"
                 >
                   Tentang Kami
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`/`}
+                  className="block py-2 px-3 text-gray-900 rounded bg-gray-100 hover:bg-gray-200 rounded-xl"
+                >
+                  <i className="fa-solid fa-arrow-right-to-bracket"></i>
                 </Link>
               </li>
             </ul>
