@@ -47,7 +47,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to={`/`}
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-primary-500 md:p-0"
+                  className="block font-bold py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-primary-500 md:p-0"
                 >
                   Beranda
                 </Link>
@@ -102,7 +102,7 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={`/`}
+                  to={`/news`}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-500 md:p-0"
                 >
                   Berita
@@ -127,7 +127,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to={`/`}
-                  className="block py-2 px-3 text-gray-900 rounded bg-gray-100 hover:bg-gray-200 rounded-xl"
+                  className="block py-2 px-3 text-gray-900 rounded bg-gray-100 hover:bg-gray-200 rounded-lg"
                 >
                   <i className="fa-solid fa-arrow-right-to-bracket"></i>
                 </Link>

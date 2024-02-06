@@ -15,7 +15,7 @@ import WomanIcons from '../../assets/icons/woman.png'
 const Yayasan = () => {
 
   const carouselRef = useRef(null);
-
+  
   useEffect(() => {
     new Carousel(carouselRef.current);
   }, []);
@@ -36,6 +36,7 @@ const Yayasan = () => {
             <Link to={`/`} className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
               Learn more
             </Link>
+            <button onClick={() => initializeCarousel()}>check</button>
           </div>
         </div>
       </section>
@@ -260,7 +261,7 @@ const Yayasan = () => {
         <div className='container mx-auto'>
           <div className='flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0'>
             <div className='w-full md:w-4/6 text-white space-y-2'>
-              <h2>Yayasan Sharhana Educare</h2>
+              <h2 className='font-bold text-gray-900'>Yayasan Sharhana Educare</h2>
               <p className='text-sm text-gray-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, necessitatibus!</p>
               <p className='text-sm text-gray-300'>Jl. Ir. H. Djuanda No.106, Kec. Cipedes, Kota Tasikmalaya, Jawa Barat.</p>
             </div>
