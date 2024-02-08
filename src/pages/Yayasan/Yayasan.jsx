@@ -1,7 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer'
 import { Link } from 'react-router-dom';
-import { Carousel } from 'flowbite';
+
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import CoverImages from '../../assets/images/cover-1.jpeg'
 import GoogleLogo from '../../assets/logos/google-logo.png'
@@ -13,12 +17,6 @@ import WhiteboardIcons from '../../assets/icons/whiteboard.png'
 import WomanIcons from '../../assets/icons/woman.png'
 
 const Yayasan = () => {
-
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    new Carousel(carouselRef.current);
-  }, []);
 
   return (
     <section className='antialiased'>
@@ -47,63 +45,43 @@ const Yayasan = () => {
         </header>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={EntrepreneurIcons} alt="" className='w-10 h-10' />
+            <img loading="lazy" src={EntrepreneurIcons} alt="" className='w-10 h-10' />
             <h2 className='font-medium text-gray-900'>Lorem ipsum dolor sit amet.</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
           </div>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={MathsIcons} alt="" className='w-10 h-10' />
+            <img loading="lazy" src={MathsIcons} alt="" className='w-10 h-10' />
             <h2 className='font-medium text-gray-900'>Lorem ipsum dolor sit amet.</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
           </div>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={ScienceIcons} alt="" className='w-10 h-10' />
+            <img loading="lazy" src={ScienceIcons} alt="" className='w-10 h-10' />
             <h2 className='font-medium text-gray-900'>Lorem ipsum dolor sit amet.</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
           </div>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={WhiteboardIcons} alt="" className='w-10 h-10' />
+            <img loading="lazy" src={WhiteboardIcons} alt="" className='w-10 h-10' />
             <h2 className='font-medium text-gray-900'>Lorem ipsum dolor sit amet.</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
           </div>
         </div>
       </section>
 
-      <section ref={carouselRef} className="relative w-full container mx-auto py-10" data-carousel="slide">
-        {/* Carousel wrapper */}
-        <div className="relative h-56 overflow-hidden md:rounded-xl md:h-96">
-          {/* Item 1 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-          </div>
-          {/* Item 2 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-          </div>
-          {/* Item 3 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-          </div>
-        </div>
-        {/* Slider indicators */}
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to={0} />
-          <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to={1} />
-          <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to={2} />
-        </div>
-        {/* Slider controls */}
-        <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-            <i className="fa-solid fa-angle-left text-white"></i>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-            <i className="fa-solid fa-angle-right text-white"></i>
-            <span className="sr-only">Next</span>
-          </span>
-        </button>
+      <section className="relative w-full container mx-auto py-10">
+          <OwlCarousel className='owl-theme' items={1} loop autoplay>
+            {/* Item 1 */}
+            <div className="relative item h-56 md:h-96">
+              <img loading="lazy" src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            {/* Item 2 */}
+            <div className="relative item h-56 md:h-96">
+              <img loading="lazy" src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            {/* Item 3 */}
+            <div className="relative item h-56 md:h-96">
+              <img loading="lazy" src={CoverImages} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+          </OwlCarousel>
       </section>
 
       <section className='container mx-auto text-center space-y-10 py-10 px-5 md:px-0'>
@@ -113,19 +91,19 @@ const Yayasan = () => {
         </header>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={GoogleLogo} alt="" className='h-14' />
+            <img loading="lazy" src={GoogleLogo} alt="" className='h-14' />
             <h2 className='font-medium text-gray-900'>Metafor Study Psikologi</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
             <Link to={`/`} className='text-sm text-center bg-gray-50 hover:bg-gray-100 px-5 py-2 rounded-lg text-gray-800'>Lihat selengkapnya</Link>
           </div>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={GoogleLogo} alt="" className='h-14' />
+            <img loading="lazy" src={GoogleLogo} alt="" className='h-14' />
             <h2 className='font-medium text-gray-900'>PAUD Bintang Ilmu</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
             <Link to={`/`} className='text-sm text-center bg-gray-50 hover:bg-gray-100 px-5 py-2 rounded-lg text-gray-800'>Lihat selengkapnya</Link>
           </div>
           <div className='flex flex-col justify-center items-center space-y-2 p-3 rounded-xl'>
-            <img src={GoogleLogo} alt="" className='h-14' />
+            <img loading="lazy" src={GoogleLogo} alt="" className='h-14' />
             <h2 className='font-medium text-gray-900'>Bimbel Yasha</h2>
             <p className='text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!</p>
             <Link to={`/`} className='text-sm text-center bg-gray-50 hover:bg-gray-100 px-5 py-2 rounded-lg text-gray-800'>Lihat selengkapnya</Link>
@@ -153,13 +131,13 @@ const Yayasan = () => {
         </header>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
+            <img loading="lazy" className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
+            <img loading="lazy" className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
+            <img loading="lazy" className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -172,19 +150,19 @@ const Yayasan = () => {
           </header>
           <div className='grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-16 px-5'>
             <div>
-              <img src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
+              <img loading="lazy" src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
             </div>
             <div>
-              <img src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
+              <img loading="lazy" src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
             </div>
             <div>
-              <img src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
+              <img loading="lazy" src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
             </div>
             <div>
-              <img src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
+              <img loading="lazy" src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
             </div>
             <div>
-              <img src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
+              <img loading="lazy" src={GoogleLogo} alt="" className='cursor-pointer grayscale hover:grayscale-0 transition ease-in-out' />
             </div>
           </div>
         </div>
@@ -196,8 +174,16 @@ const Yayasan = () => {
           <p className='text-base text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, cupiditate!</p>
         </header>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <Link to={`/news-detail`} className='flex flex-col items-center justify-center gap-2'>
+            <img loading="lazy" src={CoverImages} alt="" className='w-full rounded-xl' />
+            <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat...</p>
+            <div>
+              <h3 className='font-bold text-gray-800'>Seminar Pendidikan di TK Al-Azhar</h3>
+              <h4 className='text-sm text-gray-700'>2 Februari 2024</h4>
+            </div>
+          </Link>
           <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={CoverImages} alt="" className='w-full rounded-xl' />
+            <img loading="lazy" src={CoverImages} alt="" className='w-full rounded-xl' />
             <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat...</p>
             <div>
               <h3 className='font-bold text-gray-800'>Seminar Pendidikan di TK Al-Azhar</h3>
@@ -205,15 +191,7 @@ const Yayasan = () => {
             </div>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={CoverImages} alt="" className='w-full rounded-xl' />
-            <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat...</p>
-            <div>
-              <h3 className='font-bold text-gray-800'>Seminar Pendidikan di TK Al-Azhar</h3>
-              <h4 className='text-sm text-gray-700'>2 Februari 2024</h4>
-            </div>
-          </div>
-          <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={CoverImages} alt="" className='w-full rounded-xl' />
+            <img loading="lazy" src={CoverImages} alt="" className='w-full rounded-xl' />
             <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat...</p>
             <div>
               <h3 className='font-bold text-gray-800'>Seminar Pendidikan di TK Al-Azhar</h3>
@@ -230,7 +208,7 @@ const Yayasan = () => {
         </header>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
+            <img loading="lazy" src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
             <p className='italic text-gray-700'>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"</p>
             <div>
               <h3 className='font-bold text-gray-800'>Naimatus Sya'diah</h3>
@@ -238,7 +216,7 @@ const Yayasan = () => {
             </div>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
+            <img loading="lazy" src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
             <p className='italic text-gray-700'>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"</p>
             <div>
               <h3 className='font-bold text-gray-800'>Naimatus Sya'diah</h3>
@@ -246,7 +224,7 @@ const Yayasan = () => {
             </div>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
-            <img src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
+            <img loading="lazy" src={WomanIcons} alt="" className='w-16 h-16 rounded-xl' />
             <p className='italic text-gray-700'>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"</p>
             <div>
               <h3 className='font-bold text-gray-800'>Naimatus Sya'diah</h3>
@@ -256,44 +234,7 @@ const Yayasan = () => {
         </div>
       </section>
 
-      <footer className='bg-gray-900 py-10 px-5'>
-        <div className='container mx-auto'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0'>
-            <div className='w-full md:w-4/6 text-white space-y-2'>
-              <h2>Yayasan Sharhana Educare</h2>
-              <p className='text-sm text-gray-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, necessitatibus!</p>
-              <p className='text-sm text-gray-300'>Jl. Ir. H. Djuanda No.106, Kec. Cipedes, Kota Tasikmalaya, Jawa Barat.</p>
-            </div>
-            <div className='w-full md:w-auto text-white space-y-2'>
-              <h2>Sosial Media</h2>
-              <ul className='text-xs space-y-1 text-wrap'>
-                <li>Instagram: @yashaeducare</li>
-                <li>Youtube: Yasha Educare Channel</li>
-              </ul>
-            </div>
-            <div className='w-full md:w-auto text-white space-y-2'>
-              <h2>Kontak Kami</h2>
-              <ul className='text-xs space-y-1 text-wrap'>
-                <li>No. Telpon: +62812 8650 1015</li>
-                <li>Email: yashaeducare@gmail.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <footer className='bg-gray-800 py-3 px-5'>
-        <div className="container mx-auto">
-          <div className='flex flex-col md:flex-row justify-between gap-4'>
-            <p className='text-gray-200 text-xs order-2 md:order-none'>Copyright © 2024 Yayasan Sharhana Educare. All Rights Reserved.</p>
-            <div className='text-xs flex items-center gap-5 text-white order-1 md:order-none'>
-              <span>Kebijakan Privasi</span>
-              <span>Perizinan</span>
-              <span>Penggunaan Aplikasi</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
 
     </section>
   );

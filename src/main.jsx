@@ -11,11 +11,21 @@ import './assets/css/index.css'
 import './assets/css/all.min.css'
 
 import About from './pages/Yayasan/About';
+import News from './pages/Yayasan/News';
+import NewsDetail from './pages/Yayasan/NewsDetail';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Yayasan/>,
+  },
+  {
+    path: "/news",
+    element: <News/>,
+  },
+  {
+    path: "/news-detail",
+    element: <NewsDetail/>,
   },
   {
     path: "/about",
