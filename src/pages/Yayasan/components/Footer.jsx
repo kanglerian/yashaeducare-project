@@ -1,28 +1,30 @@
 import React from 'react'
 
-export const Footer = () => {
+export const Footer = (props) => {
   return (
     <>
       <section className='bg-gray-900 py-10 px-5'>
         <div className='container mx-auto'>
           <div className='flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0'>
             <div className='w-full md:w-4/6 text-white space-y-2'>
-              <h2>Yayasan Sharhana Educare</h2>
-              <p className='text-sm text-gray-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, necessitatibus!</p>
-              <p className='text-sm text-gray-300'>Jl. Ir. H. Djuanda No.106, Kec. Cipedes, Kota Tasikmalaya, Jawa Barat.</p>
+              <h2 className='font-bold'>{props.data.name}</h2>
+              <p className='text-sm text-gray-300'>
+                {props.data.description}
+              </p>
+              <p className='text-sm text-gray-300'>{props.data.address}</p>
             </div>
             <div className='w-full md:w-auto text-white space-y-2'>
               <h2>Sosial Media</h2>
               <ul className='text-xs space-y-1 text-wrap'>
-                <li>Instagram: @yashaeducare</li>
-                <li>Youtube: Yasha Educare Channel</li>
+                <li>Instagram: {props.data.instagram}</li>
+                <li>Youtube: {props.data.youtube}</li>
               </ul>
             </div>
             <div className='w-full md:w-auto text-white space-y-2'>
               <h2>Kontak Kami</h2>
               <ul className='text-xs space-y-1 text-wrap'>
-                <li>No. Telpon: +62812 8650 1015</li>
-                <li>Email: yashaeducare@gmail.com</li>
+                <li>No. Telpon: {props.data.phone}</li>
+                <li>Email: {props.data.email}</li>
               </ul>
             </div>
           </div>
