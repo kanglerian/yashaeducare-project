@@ -1,0 +1,99 @@
+{
+  "profile": {
+    "name": "Yayasan Sharhana Educare",
+    "description": "Description",
+    "cover": "CoverImages",
+    "email": "yashaeducare@gmail.com",
+    "phone": "+62812 8650 1015",
+    "instagram": "@yashaeducare",
+    "youtube": "Yasha Educare Channel",
+    "address": "Jl. Ir. H. Djuanda No.106, Kec. Cipedes, Kota Tasikmalaya, Jawa Barat.",
+    "video": "wn1zBuJtLcs",
+    "description_video": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, porro totam. Beatae quisquam natus aspernatur dicta recusandae ipsa molestias reprehenderit omnis at tempora, ea, facere, nisi autem laboriosam numquam laudantium atque dolorum! Porro illum molestias inventore sed, aliquid doloribus? Quo porro eos omnis nam eveniet perspiciatis atque deleniti excepturi cupiditate adipisci, consequatur esse suscipit quis eligendi, tempore harum delectus, dicta eius nulla. Quia ad, voluptas impedit maxime dolorem quod esse dolores ex totam alias magnam, inventore in autem."
+  },
+  "benefits": [
+    {
+      "icon": "EntrepreneurIcons",
+      "title": "Kelebihan Pertama",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    },{
+      "icon": "MathsIcons",
+      "title": "Kelebihan Kedua",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    },{
+      "icon": "ScienceIcons",
+      "title": "Kelebihan Ketiga",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    },{
+      "icon": "WhiteboardIcons",
+      "title": "Kelebihan Keempat",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    }
+  ],
+  "informations": [
+    {
+      "images": "CoverImages"
+    },{
+      "images": "CoverImages"
+    },{
+      "images": "CoverImages"
+    },{
+      "images": "CoverImages"
+    }
+  ],
+  "units": [
+    {
+      "icon": "GoogleLogo",
+      "title": "Metafor Study Psikologi",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    },{
+      "icon": "GoogleLogo",
+      "title": "PAUD Bintang Ilmu",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    },{
+      "icon": "GoogleLogo",
+      "title": "Bimbel Yasha",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, similique excepturi! Sequi unde atque dolorum!"
+    }
+  ],
+  "galeries": [
+    {
+      "photo": "GaleryImage"
+    },{
+      "photo": "GaleryImage"
+    },{
+      "photo": "GaleryImage"
+    }
+  ],
+  "partnerships": [
+    {
+      "logo": "GoogleLogo"
+    },{
+      "logo": "GoogleLogo"
+    },{
+      "logo": "GoogleLogo"
+    },{
+      "logo": "GoogleLogo"
+    },{
+      "logo": "GoogleLogo"
+    }
+  ],
+  "testimonials": [
+    {
+      "icon": "WomanIcons",
+      "name": "Hanin Ayumi Lerian",
+      "profession": "Student",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"
+    },{
+      "icon": "WomanIcons",
+      "name": "Lerian Febriana",
+      "profession": "Software Developer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"
+    },{
+      "icon": "WomanIcons",
+      "name": "Naimatus Sya'diah",
+      "profession": "Accountant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla incidunt repudiandae qui cupiditate repellat!"
+    }
+  ]
+}
