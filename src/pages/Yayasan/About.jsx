@@ -1,6 +1,6 @@
 import React from 'react'
-import { Navbar } from './components/Navbar'
-import { Footer } from './components/Footer'
+import { Navbar } from '../../components/Navbar'
+import { Footer } from '../../components/Footer'
 
 import CoverImages from '../../assets/images/cover-1.jpeg'
 

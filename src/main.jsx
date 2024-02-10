@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Yayasan from './pages/Yayasan/Yayasan'
-import Metaforstudy from './pages/Unit/Metaforstudy';
+import Metaforstudy from './pages/Unit/Metaforstudy/Metaforstudy';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <News/>,
   },
   {
-    path: "/news-detail",
+    path: "/news-detail/:id",
     element: <NewsDetail/>,
   },
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: <About/>,
   },
   {
-    path: "/metaforstudy",
+    path: "/unit/metaforstudy",
     element: <Metaforstudy/>,
   },
 ]);

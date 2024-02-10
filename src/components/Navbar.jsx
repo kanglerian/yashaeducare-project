@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import YashaLogo from '../../../assets/logos/yashaeducare-logo.png'
+import YashaLogo from '../assets/logos/yashaeducare-logo.png'
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -65,7 +65,7 @@ export const Navbar = () => {
             <li className="relative" ref={dropdownUnitRef}>
               <button
                 onClick={() => setDropdownUnit(!dropdownUnit)}
-                className="flex items-center justify-between gap-2 w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-500 md:p-0 md:w-auto"
+                className={`flex items-center justify-between gap-2 w-full py-2 px-3 ${(pathUrl === '/unit/metaforstudy') ? 'text-white md:text-primary-500' : 'text-gray-900 md:hover:text-primary-500 '} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto`}
               >
                 Unit Usaha
                 <i className="fa-solid fa-chevron-down text-[12px]"></i>
@@ -77,26 +77,10 @@ export const Navbar = () => {
                 <ul className="py-2 text-sm text-gray-700">
                   <li>
                     <Link
-                      to={`/`}
+                      to={`/unit/metaforstudy`}
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={`/`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Pengaturan
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={`/`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Pendapatan
+                      Meta For Study
                     </Link>
                   </li>
                 </ul>

@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar } from '../../components/Navbar'
-import { Footer } from '../../components/Footer'
+import { Navbar } from '../../../components/Navbar'
+import { Footer } from '../../../components/Footer'
 import { Link } from 'react-router-dom'
 
 import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 
-import CoverImages from '../../assets/images/cover-1.jpeg'
-import GaleryImage from '../../assets/images/image.jpeg'
+import CoverImages from '../../../assets/images/cover-1.jpeg'
+import GaleryImage from '../../../assets/images/image.jpeg'
 
-import GoogleLogo from '../../assets/logos/google-logo.png'
+import GoogleLogo from '../../../assets/logos/google-logo.png'
 
-import EntrepreneurIcons from '../../assets/icons/entrepeneur.png'
-import MathsIcons from '../../assets/icons/maths.png'
-import ScienceIcons from '../../assets/icons/science.png'
-import WhiteboardIcons from '../../assets/icons/whiteboard.png'
-import WomanIcons from '../../assets/icons/woman.png'
+import EntrepreneurIcons from '../../../assets/icons/entrepeneur.png'
+import MathsIcons from '../../../assets/icons/maths.png'
+import ScienceIcons from '../../../assets/icons/science.png'
+import WhiteboardIcons from '../../../assets/icons/whiteboard.png'
+import WomanIcons from '../../../assets/icons/woman.png'
 
-import DataJSON from '../../databases/yayasan.json'
+import DataJSON from '../../../databases/metaforstudy.json'
 
-const Yayasan = () => {
+const Metaforstudy = () => {
   const [profile, setProfile] = useState({});
   const [benefits, setBenefits] = useState([]);
   const [units, setUnits] = useState([]);
@@ -254,4 +254,4 @@ const Yayasan = () => {
   );
 };
 
-export default Yayasan;
+export default Metaforstudy;
